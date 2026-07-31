@@ -1,0 +1,45 @@
+/* Single-hue system, built entirely from the #373431 charcoal of the hero
+   wordmark. No blue anywhere — every accent, glow, and gradient below is a
+   warm-neutral shade of the same ink. */
+:root {
+  /* Charcoal ink — hero wordmark, folder icons + labels, accent text */
+  --ink: #373431;
+  --ink-deep: #211F1D;
+  --ink-soft: #6B655E;
+
+  /* Brand slots kept (widely referenced) but repointed to the ink ramp */
+  --brand: #A29C93;
+  --brand-soft: #DAD6D0;
+  --brand-deep: #4A4641;
+  --brand-glow: rgba(55, 52, 49, 0.28);
+
+  --sunset-1: #E8E5E0;
+  --sunset-2: #DAD6D0;
+  --sunset-3: #A29C93;
+  --sunset-4: #6B655E;
+  --sunset-5: #211F1D;
+
+  --primary: #373431;
+  --primary-foreground: #FFFFFF;
+  --ring: #373431;
+  --chart-1: #373431;
+  --chart-2: #6B655E;
+  --chart-3: #A29C93;
+  --chart-4: #DAD6D0;
+  --chart-5: #211F1D;
+}
+
+.dark {
+  --primary: #DAD6D0;
+  --primary-foreground: #211F1D;
+  --ring: #DAD6D0;
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-deep: var(--brand-deep);
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+  --color-ink-soft: var(--ink-soft);
+}

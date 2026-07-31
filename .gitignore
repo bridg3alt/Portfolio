@@ -1,0 +1,67 @@
+node_modules
+dist
+*.local
+.vite-dev.log
+.vite-dev.err.log
+.DS_Store
+
+# unused source images — superseded by src/styles/LINKEDIN-cut.png
+src/styles/LINKEDIN.png
+src/styles/LINKEDIN-web.png
+src/styles/IMG-20260205-WA0310 2.png
+n# certificates not referenced by the site (still on disk locally)
+src/app/components/CERTIFICATES/Altaire IEEE Participation Certificate.jpg
+src/app/components/CERTIFICATES/Elementos IEEE Treasure-Hunt.png
+src/app/components/CERTIFICATES/Future of AI Webinar.png
+src/app/components/CERTIFICATES/IEEE ETHICS CERTIFICATE.png
+src/app/components/CERTIFICATES/KDISC STRIDEFORWARD Webinar.jpg
+src/app/components/CERTIFICATES/NSS Nature Camp.jpg
+src/app/components/CERTIFICATES/Rise Her Managerial Workshop IEEE.jpg
+src/app/components/CERTIFICATES/Treasure Hunt IEDC.png
+src/app/components/CERTIFICATES/VFX Workshop.png
+src/app/components/CERTIFICATES/Venture Up Stock Market Entrepreneurial Workshop.jpg
+src/app/components/CERTIFICATES/Wadhwani Certificate.pdf
+src/app/components/CERTIFICATES/Webinar-HerQuest.jpg
+src/app/components/CERTIFICATES/Working of Pacemakers Webinar.jpg
+src/app/components/CERTIFICATES/Workshop Volunteer Venture Up.jpg
+src/app/components/CERTIFICATES/YESS IEEE.png
+
+# unreferenced assets left over from earlier design iterations
+/src/imports/6a04820596169365312282.mp4
+/src/imports/b-collage.jpg
+/src/imports/blue-mac-folder-13657.svg
+/src/imports/Brigit 1.png
+/src/imports/Desktop3D/13f8c4d6d362bf5a493cc1364d3c695a2d1bded9.png
+/src/imports/Desktop3D/1686c8b8e39e49fc551bba623dc107947c181e87.png
+/src/imports/Desktop3D/1be5ec3917794b54409feed9401986051706ca01.png
+/src/imports/Desktop3D/4fa50efabbe4fef59c36b1624285970ca2839b29.png
+/src/imports/Desktop3D/52f0328df3df3838920504b02d1ec322b3790753.png
+/src/imports/Desktop3D/90cc5cc7577a512d0d16516c282cf9291d811682.png
+/src/imports/Elementos IEEE Treasure-Hunt.png
+/src/imports/F.png
+/src/imports/for B.jpeg
+/src/imports/Group 7.png
+/src/imports/image-1.png
+/src/imports/image-2.png
+/src/imports/image-3.png
+/src/imports/image.png
+/src/imports/IMG-20250713-WA0010.jpg (1).jpeg
+/src/imports/L.png
+/src/imports/Logo reveal animation.zip
+/src/imports/o-.png
+/src/imports/O.png
+/src/imports/Object.png
+/src/imports/pasted_text/portfolio-website.md
+/src/imports/portrait-cutout.svg
+/src/imports/portrait.svg
+/src/imports/R.png
+/src/imports/Screenshot_2026-05-23_202536.png
+/src/imports/wm/0_P.png
+/src/imports/wm/1_O.png
+/src/imports/wm/2_R.png
+/src/imports/wm/3_tf.png
+/src/imports/wm/4_O2.png
+/src/imports/wm/5_L.png
+/src/imports/wm/6_i.png
+/src/imports/wm/7_O3.png
+/src/imports/Workshop Volunteer Venture Up.jpg
