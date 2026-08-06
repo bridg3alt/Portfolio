@@ -104,7 +104,10 @@ function Wordmark({ maxHeightPx }: { maxHeightPx?: number }) {
       row.style.width = prevWidth;
       if (!natural) return;
 
-      const byWidth = (PROBE * avail) / natural;
+      // 0.985: scrollWidth rounds down sub-pixels, and the letter-spacing on
+      // .font-portfolio adds a trailing advance the probe does not report, so an
+      // exact fit still spills the last letter past the right edge.
+      const byWidth = (PROBE * avail * 0.985) / natural;
       // Width alone made the word absurdly tall on short viewports, pushing the
       // copy above it off the band. Cap against the height budget too.
       const byHeight = maxHeightPx
@@ -186,14 +189,17 @@ export function Hero({
   return (
     <section
       ref={sectionRef}
-      className="relative flex h-full flex-col overflow-hidden px-6 pt-2 pb-4 sm:px-12"
+      // Mobile: content-height, gap-spaced, so a tall narrow viewport does not
+      // stretch the three bands apart into big empty gaps. md+: the original
+      // full-height layout where band A absorbs the slack.
+      className="relative flex min-h-full flex-col justify-center gap-7 overflow-hidden px-6 py-6 sm:px-12 md:h-full md:justify-start md:gap-0 md:pt-2 md:pb-4"
     >
       {/* Band A — intro copy, set straight on the page (no panel).
           The portrait lives in App.tsx, one level up, so it can start at the
           very top of the screen instead of below the header.
           The copy is IN FLOW (not absolutely centred) so its height feeds the
           flex layout — otherwise it silently overflows onto the wordmark. */}
-      <div className="relative flex min-h-0 min-w-0 flex-1 items-center">
+      <div className="relative flex min-h-0 min-w-0 items-center md:flex-1">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -270,8 +276,9 @@ export function Hero({
       </div>
 
       {/* Band B — wordmark, spanning the column and overlapping the portrait.
-          mt-6 keeps a breathing gap between the chips and the wordmark. */}
-      <div className="relative z-20 mt-6 shrink-0">
+          md:mt-6 keeps a breathing gap between the chips and the wordmark;
+          below md the section's own `gap` already provides it. */}
+      <div className="relative z-20 shrink-0 md:mt-6">
         <Wordmark maxHeightPx={wordmarkCap} />
       </div>
 
@@ -286,7 +293,7 @@ export function Hero({
           <motion.div
             onMouseMove={(e) => mouseX.set(e.clientX)}
             onMouseLeave={() => mouseX.set(-9999)}
-            className="rounded-[1.5rem] border px-6 py-4 sm:px-10"
+            className="rounded-[1.5rem] border px-3 py-4 sm:px-10"
             style={{
               // Transparent, unblurred: the portrait behind the dock stays
               // fully legible. Any backdrop-blur here would haze her out.
@@ -296,7 +303,7 @@ export function Hero({
               boxShadow: "inset 0 1px 0 rgba(255,255,255,0.35)",
             }}
           >
-            <div className="flex flex-wrap items-end justify-around gap-x-2 gap-y-4">
+            <div className="flex flex-wrap items-end justify-center gap-x-1 gap-y-4 sm:justify-around sm:gap-x-2">
               {files.map((item, i) => (
                 <div
                   key={item.id}

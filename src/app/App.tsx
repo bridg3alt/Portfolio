@@ -156,13 +156,15 @@ export default function App() {
       >
         <section
           ref={pageRef}
-          className="relative flex h-screen w-full flex-col snap-start"
+          className="relative flex min-h-[100svh] w-full flex-col snap-start md:h-screen"
         >
           {/* Portrait — hoisted out of Hero so her box starts at the very top
               of the screen (behind the header) rather than below it, which is
               the only vertical room left. `object-contain` guarantees the whole
               photo is shown: it is scaled to fit, never cropped. */}
-          <div className="pointer-events-none absolute top-[3rem] right-[2%] bottom-[4rem] z-10 hidden w-[44%] md:block">
+          {/* lg, not md: below ~1024px there is no horizontal room beside the
+              copy, and she lands on top of the wordmark and the folder dock. */}
+          <div className="pointer-events-none absolute top-[3rem] right-[2%] bottom-[4rem] z-10 hidden w-[44%] lg:block">
             <img
               src={brigit}
               alt="Brigit Thomas"
