@@ -15,7 +15,7 @@ import { Achievements } from "./components/achievements";
 import { GetInTouch } from "./components/get-in-touch";
 import { AWARDS, VOLUNTEERING } from "./data/content";
 import { MacWindow } from "./components/window";
-import resumePdf from "../imports/BRIGIT_RESUME_CS.pdf";
+import resumePdf from "../imports/BRIGIT THOMAS_RESUME_CS.pdf";
 // Background-removed portrait, cropped to the subject and downscaled from
 // LINKEDIN.png (12640px) so percentage sizing maps to her, not to empty alpha.
 import brigit from "../styles/LINKEDIN-cut.png";
@@ -177,7 +177,7 @@ export default function App() {
             <nav className="hidden items-center gap-8 text-foreground/85 md:flex">
               <motion.a
                 href={resumePdf}
-                download="BRIGIT_RESUME_CS.pdf"
+                download="BRIGIT THOMAS_RESUME_CS.pdf"
                 style={{ color: "var(--ink)", fontWeight: 600 }}
                 whileHover={pixelHover}
               >
