@@ -162,7 +162,7 @@ export default function App() {
               of the screen (behind the header) rather than below it, which is
               the only vertical room left. `object-contain` guarantees the whole
               photo is shown: it is scaled to fit, never cropped. */}
-          <div className="pointer-events-none absolute top-[3rem] right-[2%] bottom-[4rem] z-10 w-[44%]">
+          <div className="pointer-events-none absolute top-[3rem] right-[2%] bottom-[4rem] z-10 hidden w-[44%] md:block">
             <img
               src={brigit}
               alt="Brigit Thomas"

@@ -193,13 +193,13 @@ export function Hero({
           very top of the screen instead of below the header.
           The copy is IN FLOW (not absolutely centred) so its height feeds the
           flex layout — otherwise it silently overflows onto the wordmark. */}
-      <div className="relative flex min-h-0 flex-1 items-center">
+      <div className="relative flex min-h-0 min-w-0 flex-1 items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35 }}
-          // wide enough for the six chips to sit on one line
-          className="relative z-20 max-w-[41rem]"
+          // wide enough for the six chips to sit on one line, but never past viewport
+          className="relative z-20 min-w-0 w-full max-w-[41rem]"
         >
           <div className="flex items-center gap-[13px]">
             <span className="block h-px w-9 bg-foreground/60" />
@@ -220,8 +220,8 @@ export function Hero({
           >
             <SplitText text="Hello," duration={0.5} stagger={0.6} />
             <br />
-            {/* nowrap so the name never breaks mid-phrase */}
-            <span className="whitespace-nowrap">
+            {/* nowrap from sm up only — smallest phones may need the break */}
+            <span className="sm:whitespace-nowrap">
               <SplitText text="I'm" duration={0.5} stagger={0.6} delay={0.1} />{" "}
               <SplitText
                 text="Brigit Thomas"
@@ -251,8 +251,8 @@ export function Hero({
             contribute.
           </p>
 
-          {/* one line: nowrap + shrink-0 so chips never reflow to a 2nd row */}
-          <div className="mt-4 flex flex-nowrap gap-1.5">
+          {/* wraps on narrow screens; nowrap + shrink-0 keeps one line from sm up */}
+          <div className="mt-4 flex flex-wrap gap-1.5 sm:flex-nowrap">
             {SKILL_CHIPS.map((chip) => (
               <span
                 key={chip}
