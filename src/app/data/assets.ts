@@ -1,12 +1,28 @@
 import { getCertAsset } from "../components/window-content";
+import photoVienna from "../../imports/-1.png";
+import photoIcraCollage from "../../imports/-2.png";
+import photoIcraGala from "../../imports/-3.png";
+import photoSpeaking from "../../imports/-4.jpeg";
+
+/**
+ * Photos that live in `src/imports/` rather than the drop-folder. Imported
+ * explicitly — same convention as the certificates in window-content.tsx.
+ */
+const explicit: Record<string, string> = {
+  "-1.png": photoVienna,
+  "-2.png": photoIcraCollage,
+  "-3.png": photoIcraGala,
+  "-4.jpeg": photoSpeaking,
+};
 
 /**
  * Image lookup for content that references a file by name.
  *
- * Two sources, in order:
+ * Three sources, in order:
  *  1. `getCertAsset` — the certificates/awards already imported by the folder
  *     windows, so reusing one of those costs nothing extra.
- *  2. a glob over `src/app/data/updates/` — the drop-folder for new photos.
+ *  2. `explicit` — photos imported by name from `src/imports/`.
+ *  3. a glob over `src/app/data/updates/` — the drop-folder for new photos.
  *
  * Why a glob at all: a static `import` of a file that does not exist fails the
  * Vite build, and this content references photos the owner has not supplied
@@ -32,5 +48,5 @@ export function resolveAsset(filename?: string): string | undefined {
   if (!filename) return undefined;
   const existing = getCertAsset(filename);
   if (existing && !existing.isPdf) return existing.url;
-  return byName[filename];
+  return explicit[filename] ?? byName[filename];
 }

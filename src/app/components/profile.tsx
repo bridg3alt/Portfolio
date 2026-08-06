@@ -120,7 +120,7 @@ function Card({
   );
 }
 
-export function LatestUpdates() {
+export function Profile() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const count = UPDATES.length;
@@ -144,7 +144,7 @@ export function LatestUpdates() {
   }, [paused, go]);
 
   return (
-    <SectionShell kicker="What's New" title="Latest" accent="Updates">
+    <SectionShell kicker="Behind the Work" title="The" accent="Profile">
       <div
         className="relative"
         onMouseEnter={() => setPaused(true)}
@@ -178,7 +178,7 @@ export function LatestUpdates() {
           <button
             type="button"
             onClick={() => go(-1)}
-            aria-label="Previous update"
+            aria-label="Previous photo"
             className="flex size-10 items-center justify-center rounded-full border transition hover:brightness-95"
             style={{
               borderColor: "color-mix(in srgb, var(--ink) 20%, transparent)",
@@ -210,7 +210,7 @@ export function LatestUpdates() {
           <button
             type="button"
             onClick={() => go(1)}
-            aria-label="Next update"
+            aria-label="Next photo"
             className="flex size-10 items-center justify-center rounded-full border transition hover:brightness-95"
             style={{
               borderColor: "color-mix(in srgb, var(--ink) 20%, transparent)",

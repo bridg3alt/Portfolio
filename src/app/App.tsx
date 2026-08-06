@@ -9,7 +9,8 @@ import { ArrowDown, Github, Linkedin, Instagram, Mail } from "lucide-react";
 import { Hero } from "./components/hero";
 import { Journey } from "./components/journey";
 import { Education } from "./components/education";
-import { LatestUpdates } from "./components/latest-updates";
+import { Profile } from "./components/profile";
+import { AchievementRail } from "./components/achievement-rail";
 import { Achievements } from "./components/achievements";
 import { GetInTouch } from "./components/get-in-touch";
 import { AWARDS, VOLUNTEERING } from "./data/content";
@@ -221,8 +222,9 @@ export default function App() {
         {/* Scrolling sections below the hero. The folder windows still hold the
             detailed version of this content — these are the scannable form. */}
         <Journey />
+        <AchievementRail />
         <Education />
-        <LatestUpdates />
+        <Profile />
         <Achievements />
         <GetInTouch
           links={[
@@ -310,9 +312,8 @@ export default function App() {
       >
         <SectionGrid>
           <ExpandableItem
-            title="Project Head — STRIDE Student Leadership Team, K-DISC"
-            meta="K-DISC · Jan 2026 – Present"
-            defaultOpen
+            title="Project Head, STRIDE SLT"
+            meta="Social Technology and Research for Inclusive Design Excellence, K-DISC · Jan 2026 – Present"
           >
             <ul className="flex flex-col gap-2">
               <li>
@@ -649,7 +650,6 @@ export default function App() {
           <ExpandableItem
             title="Initiative Lead — IEEE ProComm–TEMS Kerala Joint Chapter"
             meta="Mar 2026 – Present"
-            defaultOpen
           >
             <ul className="flex flex-col gap-2">
               <li>

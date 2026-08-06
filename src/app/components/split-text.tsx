@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from "react";
+import { Fragment, useMemo, type CSSProperties } from "react";
 import { motion } from "motion/react";
 
 /**
@@ -9,6 +9,7 @@ import { motion } from "motion/react";
 export function SplitText({
   text,
   className,
+  style,
   gradient,
   duration = 0.5,
   stagger = 0.7,
@@ -16,6 +17,7 @@ export function SplitText({
 }: {
   text: string;
   className?: string;
+  style?: CSSProperties;
   /** optional CSS background-image; applied per char as a clipped text gradient */
   gradient?: string;
   duration?: number;
@@ -55,6 +57,7 @@ export function SplitText({
   return (
     <motion.span
       className={className}
+      style={style}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}

@@ -53,8 +53,8 @@ export const INTERNSHIPS: TimelineEntry[] = [
   {
     id: "stride",
     period: "Jan 2026 — Present",
-    title: "Project Head, STRIDE Student Leadership Team",
-    org: "K-DISC",
+    title: "Project Head, STRIDE SLT",
+    org: "Social Technology and Research for Inclusive Design Excellence, K-DISC",
     blurb:
       "Leading accessibility-driven initiatives in inclusive technology — planning hackathons, workshops and community programs around assistive tech.",
   },
@@ -214,6 +214,61 @@ export const VOLUNTEERING: AwardEntry[] = [
  */
 export const ACHIEVEMENT_CARDS: AwardEntry[] = AWARDS;
 
+/** One card on the auto-scrolling achievements rail. */
+export type AchievementStat = {
+  value: string;
+  title: string;
+  description: string;
+  /** Filename resolved through src/app/data/assets.ts. */
+  image?: string;
+};
+
+/** Condensed headline form of AWARDS / VOLUNTEERING / LEADERSHIP. */
+export const ACHIEVEMENT_STATS: AchievementStat[] = [
+  {
+    value: "ICRA 2026",
+    title: "IDEA Travel Support Recipient",
+    description:
+      "Selected by the IEEE Robotics & Automation Society to attend ICRA 2026 in Vienna.",
+    image: "-2.png",
+  },
+  {
+    value: "Top 8",
+    title: "STRIDE Makethon — Best Viable Idea",
+    description:
+      "Winning team for ÓL, an assistive water bottle pairing IoT hardware with a caregiver app.",
+    image: "KDISC STRIDE Hackathon Winner Top.jpg",
+  },
+  {
+    value: "2x",
+    title: "STRIDE Awards, K-DISC",
+    description:
+      "Best Viable Idea and Powerful Story across the 2025 Designathon & Makethon.",
+    image: "KDISC STRIDE Hackathon Winner-PS.jpg",
+  },
+  {
+    value: "2 Editions",
+    title: "COMPILE Newsletter Designer",
+    description:
+      "Layouts, illustrations and branding for the IEEE CS Kerala technical newsletter.",
+    image: "COMPILE BLUE.png",
+  },
+  {
+    value: "Co-Lead",
+    title: "Infinia 2.0 National Flagship",
+    description:
+      "Drove planning and execution of IEEE Sahrdaya's national-level flagship event.",
+    image: "Brigit Thomas_Infinia 2.0_page-0001.jpg",
+  },
+  {
+    value: "4 Roles",
+    title: "IEEE Leadership Positions",
+    description:
+      "Initiative Lead, Coordinator, Secretary and Chairperson across chapters and sections.",
+    image: "TechXInfinia Volunteer (IEEE Flagship Event).png",
+  },
+];
+
 export type UpdateEntry = {
   id: string;
   date: string;
@@ -228,71 +283,41 @@ export type UpdateEntry = {
   image?: string;
 };
 
-/** Edit freely — this is the only place the Latest Updates cards come from. */
+/** Edit freely — this is the only place the Profile cards come from. */
 export const UPDATES: UpdateEntry[] = [
   {
-    id: "icra",
+    id: "icra-vienna",
+    date: "Jun 2026",
+    category: "Travel",
+    title: "Vienna, after hours",
+    excerpt:
+      "Walking the old town between ICRA sessions — a first conference abroad, and a first city to get lost in.",
+    image: "-1.png",
+  },
+  {
+    id: "icra-gala",
     date: "Jun 2026",
     category: "Recognition",
-    title: "Heading to IEEE ICRA 2026",
+    title: "ICRA 2026 Awards Night",
     excerpt:
-      "Awarded the IDEA Travel Support to attend one of the world's leading robotics and automation conferences.",
-    image: "ICRA IDEA.jpeg",
+      "The IDEA Travel Support awardees' evening at the Hofburg — celebrating inclusion, diversity and accessibility in robotics.",
+    image: "-3.png",
   },
   {
-    id: "procomm",
-    date: "Mar 2026",
-    category: "Leadership",
-    title: "Initiative Lead at IEEE ProComm–TEMS Kerala",
-    excerpt:
-      "Now leading statewide programs on professional communication and technology leadership across the Kerala Section.",
-    // awaiting photo — drop "ProComm TEMS.jpg" into components/CERTIFICATES/
-    image: "ProComm TEMS.jpg",
-  },
-  {
-    id: "stride",
-    date: "Jan 2026",
-    category: "Role",
-    title: "Project Head, STRIDE at K-DISC",
-    excerpt:
-      "Driving accessibility-first initiatives — hackathons, workshops and community programs built around assistive technology.",
-    image: "KDISC STRIDE Innovation Day.png",
-  },
-  {
-    id: "compile",
+    id: "speaking",
     date: "2025",
-    category: "Publication",
-    title: "COMPILE Edition 2 shipped",
+    category: "Speaking",
+    title: "On the mic",
     excerpt:
-      "Designed the layouts, illustrations and branding for the second edition of the IEEE CS Kerala technical newsletter.",
-    image: "COMPILE BLUE.png",
-  },
-  {
-    id: "makethon",
-    date: "2025",
-    category: "Award",
-    title: "Best Viable Idea at STRIDE Makethon",
-    excerpt:
-      "Top-8 finish for ÓL — an IoT assistive water bottle pairing sensor hardware with a caregiver companion app.",
-    image: "KDISC STRIDE Hackathon Winner Top.jpg",
-  },
-  {
-    id: "bubbles",
-    date: "Ongoing",
-    category: "Project",
-    title: "Building Bubbles",
-    excerpt:
-      "An accessibility-first EdTech platform for neurodivergent children — adaptive learning, conversational AI and computer vision.",
-    // awaiting photo — drop "Bubbles.png" into components/CERTIFICATES/
-    image: "Bubbles.png",
+      "Hosting and speaking at student branch events — the part of leadership that happens in a room, not a document.",
+    image: "-4.jpeg",
   },
 ];
 
 export const SKILL_CHIPS = [
-  "Accessibility",
-  "AI/ML",
-  "IEEE Leader",
-  "UI/UX",
-  "Assistive Tech",
   "Full-Stack",
+  "Accessibility",
+  "IEEE Leader",
+  "Human-Centered",
+  "Assistive Tech",
 ];

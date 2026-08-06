@@ -82,7 +82,9 @@ export function ExpandableItem({
   title,
   meta,
   children,
-  defaultOpen = false,
+  // expanded by default — the detail is the point of these windows; the header
+  // still collapses an item if the reader wants to scan
+  defaultOpen = true,
 }: {
   title: string;
   meta?: string;
@@ -289,9 +291,7 @@ export function CertRow({
           </div>
         )}
         {desc && (
-          // clamped: descriptions vary ~4x in length and were driving very
-          // uneven card heights in the two-column grid
-          <p className="text-muted-foreground mt-2 line-clamp-3 text-sm leading-relaxed">
+          <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
             {desc}
           </p>
         )}

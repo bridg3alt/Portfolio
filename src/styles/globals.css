@@ -43,3 +43,30 @@
   --color-ink-deep: var(--ink-deep);
   --color-ink-soft: var(--ink-soft);
 }
+
+/* Achievements rail — the track holds the list twice, so translating by half its
+ * width (minus half the 2.5rem gap) lands exactly on the duplicate. Keep the
+ * offset in sync with the gap in components/achievement-rail.tsx. */
+.achieve-track {
+  animation: achieve-scroll 34s linear infinite;
+}
+
+.achieve-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes achieve-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 1.25rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .achieve-track {
+    animation: none !important;
+    transform: none !important;
+  }
+}

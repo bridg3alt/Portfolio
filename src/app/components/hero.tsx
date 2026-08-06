@@ -214,7 +214,7 @@ export function Hero({
             className="font-display mt-[13px] text-foreground"
             style={{
               fontSize: "clamp(2rem, 3.6vw, 2.9rem)",
-              lineHeight: 1.04,
+              lineHeight: 1.25,
               letterSpacing: "-0.03em",
             }}
           >
@@ -226,6 +226,7 @@ export function Hero({
               <SplitText
                 text="Brigit Thomas"
                 className="italic"
+                style={{ fontFamily: "'Playfair Display', var(--font-serif)" }}
                 gradient="linear-gradient(120deg, var(--ink-deep), var(--ink-soft))"
                 duration={0.5}
                 stagger={0.6}
@@ -235,20 +236,23 @@ export function Hero({
           </h2>
 
           <p
-            className="mt-5 max-w-[32rem] text-muted-foreground"
-            style={{ fontSize: "1.0625rem", lineHeight: 1.65 }}
+            className="mt-4 max-w-[38rem] text-muted-foreground text-justify"
+            style={{ fontSize: "0.95rem", lineHeight: 1.5, textAlignLast: "left" }}
           >
-            I'm a <b className="text-foreground">B.Tech CSE undergraduate</b> at
-            Sahrdaya College, Kerala — building{" "}
-            <b className="text-foreground">inclusive, accessible software</b> and{" "}
-            <b className="text-foreground">AI/ML systems</b>. I lead{" "}
-            <b className="text-foreground">IEEE chapters</b>, design with empathy,
-            and care about <b className="text-foreground">assistive technology</b>{" "}
-            that actually reaches people.
+            I'm a <b className="text-foreground">Computer Science undergraduate</b>{" "}
+            passionate about building technology that creates meaningful impact.
+            My interests span <b className="text-foreground">Artificial Intelligence</b>,{" "}
+            <b className="text-foreground">Assistive Technology</b>,{" "}
+            <b className="text-foreground">Human-Centered Computing</b> and{" "}
+            <b className="text-foreground">Robotics</b>, where I enjoy transforming
+            ideas into practical solutions that put people first. Beyond
+            engineering, I actively lead technical communities, collaborate with
+            diverse teams, and embrace every opportunity to learn, innovate, and
+            contribute.
           </p>
 
           {/* one line: nowrap + shrink-0 so chips never reflow to a 2nd row */}
-          <div className="mt-5 flex flex-nowrap gap-1.5">
+          <div className="mt-4 flex flex-nowrap gap-1.5">
             {SKILL_CHIPS.map((chip) => (
               <span
                 key={chip}
