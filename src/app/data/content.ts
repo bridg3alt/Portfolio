@@ -52,7 +52,7 @@ export const LEADERSHIP: TimelineEntry[] = [
 export const INTERNSHIPS: TimelineEntry[] = [
   {
     id: "stride",
-    period: "Jan 2026 — Present",
+    period: "Jan 2026 — Jul 2026",
     title: "Project Head, STRIDE SLT",
     org: "Social Technology and Research for Inclusive Design Excellence, K-DISC",
     blurb:
@@ -149,7 +149,7 @@ export const AWARDS: AwardEntry[] = [
     date: "2025",
     link: "#",
     icon: "award",
-    image: "KDISC STRIDE Hackathon Winner Top.jpg",
+    image: "STRIDE 50000.jpeg",
     desc: "Winner (one of the Top 8 teams) of STRIDE Makethon 2025 for the best viable assistive prototype, “ÓL — Empowering Independence”.",
     keywords: ["Assistive Tech", "Prototyping", "Innovation", "Hackathon"],
   },
@@ -159,7 +159,7 @@ export const AWARDS: AwardEntry[] = [
     date: "2025",
     link: "#",
     icon: "idea",
-    image: "KDISC STRIDE Hackathon Winner-PS.jpg",
+    image: "STRIDE AWARD DIST.jpeg",
     desc: "Recognised for the most compelling storytelling of the STRIDE Designathon & Makethon 2025 journey — creativity, authenticity, and social-media engagement.",
     keywords: ["Social Impact", "Creativity", "Storytelling"],
   },
@@ -233,39 +233,39 @@ export const ACHIEVEMENT_STATS: AchievementStat[] = [
     image: "-2.png",
   },
   {
-    value: "Top 8",
+    value: "2x",
     title: "STRIDE Makethon — Best Viable Idea",
     description:
       "Winning team for ÓL, an assistive water bottle pairing IoT hardware with a caregiver app.",
-    image: "KDISC STRIDE Hackathon Winner Top.jpg",
+    image: "STRIDE 50000.jpeg",
   },
   {
-    value: "2x",
-    title: "STRIDE Awards, K-DISC",
+    value: "Powerful Story",
+    title: "STRIDE — Powerful Story Award",
     description:
-      "Best Viable Idea and Powerful Story across the 2025 Designathon & Makethon.",
-    image: "KDISC STRIDE Hackathon Winner-PS.jpg",
+      "Recognised for the most compelling storytelling of the STRIDE Designathon & Makethon 2025 journey.",
+    image: "STRIDE AWARD DIST.jpeg",
   },
   {
-    value: "2 Editions",
-    title: "COMPILE Newsletter Designer",
+    value: "Rexa",
+    title: "Humanoid & Line-Tracking Robot",
     description:
-      "Layouts, illustrations and branding for the IEEE CS Kerala technical newsletter.",
-    image: "COMPILE BLUE.png",
+      "High-school robotics project — an interactive humanoid robot and an autonomous line-tracking AGV.",
+    image: "ROBOT.jpeg",
   },
   {
-    value: "Co-Lead",
-    title: "Infinia 2.0 National Flagship",
+    value: "IEEE Sahrdaya SB",
+    title: "Execom Recognition",
     description:
-      "Drove planning and execution of IEEE Sahrdaya's national-level flagship event.",
-    image: "Brigit Thomas_Infinia 2.0_page-0001.jpg",
+      "Recognised at an IEEE Sahrdaya Student Branch Execom ceremony for leadership contributions.",
+    image: "IEEE AWARD GIVING 1.jpeg",
   },
   {
-    value: "4 Roles",
-    title: "IEEE Leadership Positions",
+    value: "NIT Calicut",
+    title: "Summer Research Internship — CITRA",
     description:
-      "Initiative Lead, Coordinator, Secretary and Chairperson across chapters and sections.",
-    image: "TechXInfinia Volunteer (IEEE Flagship Event).png",
+      "Completed a research internship at the Centre for IT Research & Automation, NIT Calicut.",
+    image: "CITRA CERTIFICATE.jpeg",
   },
 ];
 
@@ -311,6 +311,15 @@ export const UPDATES: UpdateEntry[] = [
     excerpt:
       "Hosting and speaking at student branch events — the part of leadership that happens in a room, not a document.",
     image: "-4.jpeg",
+  },
+  {
+    id: "olvia",
+    date: "2025",
+    category: "Project",
+    title: "Building ÓL",
+    excerpt:
+      "Prototyping the assistive smart water bottle with the team — the STRIDE Makethon idea that became a working build.",
+    image: "OLVIA.jpeg",
   },
 ];
 

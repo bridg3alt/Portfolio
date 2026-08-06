@@ -315,7 +315,7 @@ export default function App() {
         <SectionGrid>
           <ExpandableItem
             title="Project Head, STRIDE SLT"
-            meta="Social Technology and Research for Inclusive Design Excellence, K-DISC · Jan 2026 – Present"
+            meta="Social Technology and Research for Inclusive Design Excellence, K-DISC · Jan 2026 – Jul 2026"
           >
             <ul className="flex flex-col gap-2">
               <li>
@@ -377,12 +377,12 @@ export default function App() {
               <CertThumb
                 name="Internship Certificate"
                 issuer="NIT Calicut · CITRA"
-                image="Internship NIT Calicut Certificate.jpg"
+                image="CITRA CERTIFICATE.jpeg"
                 onOpen={() =>
                   setCert({
                     name: "Summer Internship — NIT Calicut (CITRA)",
                     issuer: "NIT Calicut · 02 Jun 2025 – 04 Jul 2025",
-                    image: "Internship NIT Calicut Certificate.jpg",
+                    image: "CITRA CERTIFICATE.jpeg",
                   })
                 }
               />
@@ -694,19 +694,35 @@ export default function App() {
                 event visibility.
               </li>
             </ul>
-            <div className="mt-3 max-w-[220px]">
-              <CertThumb
-                name="ECC Certificate"
-                issuer="IEEE Computer Society Kerala"
-                image="ECC CERTIFICATE.png"
-                onOpen={() =>
-                  setCert({
-                    name: "Electronic Communications Coordinator — IEEE Computer Society Kerala",
-                    issuer: "IEEE CS Kerala · Jan 2025 – Jan 2026",
-                    image: "ECC CERTIFICATE.png",
-                  })
-                }
-              />
+            <div className="mt-3 flex max-w-[460px] flex-wrap gap-3">
+              <div className="w-[220px]">
+                <CertThumb
+                  name="ECC Certificate"
+                  issuer="IEEE Computer Society Kerala"
+                  image="ECC CERTIFICATE.png"
+                  onOpen={() =>
+                    setCert({
+                      name: "Electronic Communications Coordinator — IEEE Computer Society Kerala",
+                      issuer: "IEEE CS Kerala · Jan 2025 – Jan 2026",
+                      image: "ECC CERTIFICATE.png",
+                    })
+                  }
+                />
+              </div>
+              <div className="w-[220px]">
+                <CertThumb
+                  name="ECC — IEEE CS Kerala"
+                  issuer="IEEE Computer Society Kerala"
+                  image="ECC CSKS.jpeg"
+                  onOpen={() =>
+                    setCert({
+                      name: "Electronic Communications Coordinator — IEEE Computer Society Kerala",
+                      issuer: "IEEE CS Kerala · Jan 2025 – Jan 2026",
+                      image: "ECC CSKS.jpeg",
+                    })
+                  }
+                />
+              </div>
             </div>
           </ExpandableItem>
           <ExpandableItem
@@ -729,19 +745,35 @@ export default function App() {
                 activities.
               </li>
             </ul>
-            <div className="mt-3 max-w-[220px]">
-              <CertThumb
-                name="Certificate of Appreciation"
-                issuer="IEEE Sahrdaya SB · Execom'25"
-                image="IEEE Sahrdaya SB Secretary Certificate.jpg"
-                onOpen={() =>
-                  setCert({
-                    name: "Secretary — IEEE Student Branch, Sahrdaya",
-                    issuer: "IEEE Sahrdaya SB · Jan 2025 – Jan 2026",
-                    image: "IEEE Sahrdaya SB Secretary Certificate.jpg",
-                  })
-                }
-              />
+            <div className="mt-3 flex max-w-[460px] flex-wrap gap-3">
+              <div className="w-[220px]">
+                <CertThumb
+                  name="Certificate of Appreciation"
+                  issuer="IEEE Sahrdaya SB · Execom'25"
+                  image="IEEE Sahrdaya SB Secretary Certificate.jpg"
+                  onOpen={() =>
+                    setCert({
+                      name: "Secretary — IEEE Student Branch, Sahrdaya",
+                      issuer: "IEEE Sahrdaya SB · Jan 2025 – Jan 2026",
+                      image: "IEEE Sahrdaya SB Secretary Certificate.jpg",
+                    })
+                  }
+                />
+              </div>
+              <div className="w-[220px]">
+                <CertThumb
+                  name="Secretary — IEEE Sahrdaya SB"
+                  issuer="IEEE Sahrdaya SB"
+                  image="SECRETARY.jpeg"
+                  onOpen={() =>
+                    setCert({
+                      name: "Secretary — IEEE Student Branch, Sahrdaya",
+                      issuer: "IEEE Sahrdaya SB · Jan 2025 – Jan 2026",
+                      image: "SECRETARY.jpeg",
+                    })
+                  }
+                />
+              </div>
             </div>
           </ExpandableItem>
           <ExpandableItem

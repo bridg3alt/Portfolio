@@ -12,8 +12,6 @@ import {
 } from "lucide-react";
 // Certificate assets — only the ones actually shown are imported, so unused
 // files in CERTIFICATES/ are not bundled. (Filenames have spaces; Vite resolves.)
-import certStrideWin from "./CERTIFICATES/KDISC STRIDE Hackathon Winner Top.jpg";
-import certStridePS from "./CERTIFICATES/KDISC STRIDE Hackathon Winner-PS.jpg";
 import certStrideInnov from "./CERTIFICATES/KDISC STRIDE Innovation Day.png";
 import certDrone from "./CERTIFICATES/NIELIT DRONE Workshop.png";
 import certIntelAI from "./CERTIFICATES/Intel AI Certificate.png";
@@ -21,7 +19,11 @@ import certSpokenCpp from "./CERTIFICATES/Spoken CPP.png";
 import certSpokenGit from "./CERTIFICATES/Spoken Git.png";
 import certRos2 from "./CERTIFICATES/ROS2 Workshop.jpg";
 import certWadhwani from "../../imports/Wadhwani.png";
-import certNit from "./CERTIFICATES/Internship NIT Calicut Certificate.jpg";
+import certCitra from "../../imports/PORTFOLIO CONTENT/CITRA CERTIFICATE.jpeg";
+import certStride50000 from "../../imports/PORTFOLIO CONTENT/STRIDE 50000.jpeg";
+import certStrideAwardDist from "../../imports/PORTFOLIO CONTENT/STRIDE AWARD DIST.jpeg";
+import photoSecretary from "../../imports/PORTFOLIO CONTENT/SECRETARY.jpeg";
+import photoEccCsks from "../../imports/PORTFOLIO CONTENT/ECC CSKS.jpeg";
 import certPython from "./CERTIFICATES/Python Internship.jpeg";
 import certSecretary from "./CERTIFICATES/IEEE Sahrdaya SB Secretary Certificate.jpg";
 import certChair from "./CERTIFICATES/IEEE Sahrdaya SB NPSS Chairperson.jpg";
@@ -43,8 +45,6 @@ export function SectionGrid({ children }: { children: ReactNode }) {
 
 /* Certificate lookup keyed by the file name referenced from App.tsx. */
 const certImageMap: Record<string, string> = {
-  "KDISC STRIDE Hackathon Winner Top.jpg": certStrideWin,
-  "KDISC STRIDE Hackathon Winner-PS.jpg": certStridePS,
   "KDISC STRIDE Innovation Day.png": certStrideInnov,
   "NIELIT DRONE Workshop.png": certDrone,
   "Intel AI Certificate.png": certIntelAI,
@@ -54,7 +54,11 @@ const certImageMap: Record<string, string> = {
   "Wadhwani.png": certWadhwani,
   "COMPILE BROWN.jpg": certCompile1Cover,
   "COMPILE BLUE.png": certCompile2Cover,
-  "Internship NIT Calicut Certificate.jpg": certNit,
+  "CITRA CERTIFICATE.jpeg": certCitra,
+  "STRIDE 50000.jpeg": certStride50000,
+  "STRIDE AWARD DIST.jpeg": certStrideAwardDist,
+  "SECRETARY.jpeg": photoSecretary,
+  "ECC CSKS.jpeg": photoEccCsks,
   "Python Internship.jpeg": certPython,
   "IEEE Sahrdaya SB Secretary Certificate.jpg": certSecretary,
   "IEEE Sahrdaya SB NPSS Chairperson.jpg": certChair,

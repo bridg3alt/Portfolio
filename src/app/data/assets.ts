@@ -3,6 +3,9 @@ import photoVienna from "../../imports/-1.png";
 import photoIcraCollage from "../../imports/-2.png";
 import photoIcraGala from "../../imports/-3.png";
 import photoSpeaking from "../../imports/-4.jpeg";
+import photoRobot from "../../imports/PORTFOLIO CONTENT/ROBOT.jpeg";
+import photoIeeeAwardGiving from "../../imports/PORTFOLIO CONTENT/IEEE AWARD GIVING 1.jpeg";
+import photoOlvia from "../../imports/PORTFOLIO CONTENT/OLVIA.jpeg";
 
 /**
  * Photos that live in `src/imports/` rather than the drop-folder. Imported
@@ -13,6 +16,9 @@ const explicit: Record<string, string> = {
   "-2.png": photoIcraCollage,
   "-3.png": photoIcraGala,
   "-4.jpeg": photoSpeaking,
+  "ROBOT.jpeg": photoRobot,
+  "IEEE AWARD GIVING 1.jpeg": photoIeeeAwardGiving,
+  "OLVIA.jpeg": photoOlvia,
 };
 
 /**
