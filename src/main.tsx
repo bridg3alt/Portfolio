@@ -5,8 +5,7 @@ import "./styles/index.css";
 import App from "./app/App";
 import { BlogIndex, BlogPostPage } from "./app/components/blog";
 
-// Deep links (/blog/…) rely on the CloudFront 403/404 → /index.html fallback
-// described in README.md.
+// Deep links (/blog/…) rely on the SPA rewrite to /index.html in vercel.json.
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
