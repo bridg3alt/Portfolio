@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { Link, useLocation } from "react-router";
 import { pixelHover } from "./components/pixel-hover";
 import { AmbientBackground } from "./components/ambient-background";
 import { GrainOverlay } from "./components/grain-overlay";
@@ -75,8 +76,15 @@ export default function App() {
   const pageRef = useRef<HTMLElement>(null);
 
   // Splash runs once per page load. It waits for a deliberate scroll/click, so
-  // the reveal is never cut off mid-animation.
-  const [introDone, setIntroDone] = useState(false);
+  // the reveal is never cut off mid-animation. Arriving here from inside the
+  // site (e.g. back from the blog) skips it — "default" is the key of the
+  // first location in a page load.
+  const location = useLocation();
+  const [introDone, setIntroDone] = useState(location.key !== "default");
+
+  useEffect(() => {
+    document.title = "Brigit Thomas — Portfolio";
+  }, []);
   const touchStartY = useRef<number | null>(null);
   const dismissIntro = () => setIntroDone(true);
 
@@ -183,6 +191,11 @@ export default function App() {
               >
                 Download CV
               </motion.a>
+              <motion.span whileHover={pixelHover} className="inline-flex">
+                <Link to="/blog" className="hover:text-foreground">
+                  Blog
+                </Link>
+              </motion.span>
               <motion.a
                 href="#contact"
                 className="hover:text-foreground"
@@ -207,7 +220,10 @@ export default function App() {
                 </motion.a>
               ))}
             </nav>
-            <div className="md:hidden text-foreground">Menu</div>
+            {/* the desktop nav is hidden below md, so keep the blog reachable */}
+            <Link to="/blog" className="md:hidden text-foreground">
+              Blog
+            </Link>
             <div
               className="font-display text-foreground"
               style={{ fontSize: "1.5rem" }}

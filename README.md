@@ -124,6 +124,8 @@ once your bucket name and distribution ID are set.
 - **Content** — edit the section data in [`src/app/App.tsx`](src/app/App.tsx) (About stats,
   Education, Internships, Projects, IEEE, Skills, Achievements) and the intro in
   [`src/app/components/intro.tsx`](src/app/components/intro.tsx).
+- **Blog** — add a Markdown file to [`src/app/data/blog/`](src/app/data/blog/README.md); it
+  appears at `/blog/<file-name>`. Posts with `draft: true` show in `npm run dev` only.
 - **Theme colors** — the brand palette lives in
   [`src/styles/globals.css`](src/styles/globals.css) (`--brand`, `--brand-soft`, `--brand-deep`).
 - **Résumé** — replace the PDF in `src/imports/` (it's a separate binary; update it there when
