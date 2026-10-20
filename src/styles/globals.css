@@ -44,31 +44,14 @@
   --color-ink-soft: var(--ink-soft);
 }
 
-/* Achievements rail — the track holds the list twice, so translating by half its
- * width (minus half the 2.5rem gap) lands exactly on the duplicate. Keep the
- * offset in sync with the gap in components/achievement-rail.tsx. */
-.achieve-track {
-  animation: achieve-scroll 34s linear infinite;
+/* Achievements rail — scrolled by JS in components/achievement-rail.tsx so the
+ * auto-scroll and manual scrolling (arrows, swipe, trackpad) share one
+ * position. Hide the native scrollbar; the arrow buttons replace it. */
+.achieve-scroller {
+  scrollbar-width: none;
 }
-
-.achieve-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes achieve-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-50% - 1.25rem));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .achieve-track {
-    animation: none !important;
-    transform: none !important;
-  }
+.achieve-scroller::-webkit-scrollbar {
+  display: none;
 }
 
 /* Blog post body — Markdown HTML from src/app/data/blog.ts. No typography

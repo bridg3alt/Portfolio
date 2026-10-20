@@ -144,6 +144,16 @@ export const AWARDS: AwardEntry[] = [
     ],
   },
   {
+    name: "Data Science Contest Winner — Siemens",
+    issuer: "Siemens",
+    date: "2026",
+    link: "#",
+    icon: "award",
+    image: "SIEMENS.jpeg",
+    desc: "Secured first prize in the Data Science Contest held in association with Siemens as part of IEDC Summit 2026 — Asia's largest summit for aspiring entrepreneurs.",
+    keywords: ["Data Science", "Machine Learning", "Analytics", "Competition"],
+  },
+  {
     name: "STRIDE Makethon 2025 — Best Viable Idea Award",
     issuer: "K-DISC, Kerala",
     date: "2025",
@@ -231,6 +241,13 @@ export const ACHIEVEMENT_STATS: AchievementStat[] = [
     description:
       "Selected by the IEEE Robotics & Automation Society to attend ICRA 2026 in Vienna.",
     image: "-2.png",
+  },
+  {
+    value: "1st Prize",
+    title: "Data Science Contest — Siemens",
+    description:
+      "Won the Data Science Contest held with Siemens at IEDC Summit 2026.",
+    image: "SIEMENS.jpeg",
   },
   {
     value: "2x",
@@ -329,4 +346,5 @@ export const SKILL_CHIPS = [
   "IEEE Leader",
   "Human-Centered",
   "Assistive Tech",
+  "Data Science",
 ];

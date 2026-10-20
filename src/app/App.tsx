@@ -499,6 +499,92 @@ export default function App() {
           />
           <ProjectBlock
             index={2}
+            title="Eko — Game-Based AI Speech Therapy"
+            date="Final Year Project · In Progress"
+            category="AI · Explainable AI · Healthcare · Gamification"
+            problem={
+              <>
+                An <b className="text-foreground">AI-powered speech-therapy app</b>{" "}
+                that identifies the{" "}
+                <b className="text-foreground">type of stutter</b> a person has
+                and helps them practise through{" "}
+                <b className="text-foreground">interactive games</b>.
+              </>
+            }
+            tech={[
+              "Flutter",
+              "Python",
+              "PyTorch",
+              "FastAPI",
+              "PostgreSQL",
+              "Docker",
+              "AWS",
+              "SHAP",
+              "RAG",
+            ]}
+            outcomes={[
+              <>
+                Identifies the{" "}
+                <b className="text-foreground">type and severity of stutter</b>{" "}
+                from the user's speech, then picks the exercises that suit it.
+              </>,
+              <>
+                Turns those exercises into{" "}
+                <b className="text-foreground">interactive games</b>, while an
+                AI <b className="text-foreground">digital twin</b> follows each
+                user's progress over time and adapts what comes next.
+              </>,
+              <>
+                Uses <b className="text-foreground">Explainable AI</b> so
+                therapists can see <b className="text-foreground">why</b> a
+                result was given, with suggestions backed by real clinical
+                sources on a secure <b className="text-foreground">cloud</b>{" "}
+                backend.
+              </>,
+            ]}
+          />
+          <ProjectBlock
+            index={3}
+            title="MemoryBridge — Music That Brings Memories Back"
+            category="AI · Machine Learning · Personalisation"
+            problem={
+              <>
+                An AI-powered{" "}
+                <b className="text-foreground">music recommendation system</b>{" "}
+                that reconnects listeners with songs from the meaningful
+                periods of their lives — personalised by age, language, genre,
+                favourite artists and popularity.
+              </>
+            }
+            tech={[
+              "Python",
+              "Altair AI Studio (RapidMiner)",
+              "TurboPrep",
+              "Random Forest",
+              "Machine Learning",
+            ]}
+            outcomes={[
+              <>
+                Built a library of{" "}
+                <b className="text-foreground">9,840 songs from 1950–2010</b>,
+                mixing the Million Song Dataset with Hindi and Malayalam
+                music.
+              </>,
+              <>
+                Trained a{" "}
+                <b className="text-foreground">Random Forest model</b> on the
+                listening patterns of 300 simulated listeners to learn what
+                each person would love.
+              </>,
+              <>
+                Listeners share a memory or life period in{" "}
+                <b className="text-foreground">Malayalam, Hindi or English</b>,
+                and get songs that fit that moment.
+              </>,
+            ]}
+          />
+          <ProjectBlock
+            index={4}
             title="Personal Portfolio Website"
             category="Frontend · Cloud"
             problem={
@@ -535,7 +621,7 @@ export default function App() {
             ]}
           />
           <ProjectBlock
-            index={3}
+            index={5}
             title="ÓL — Assistive Smart Water Bottle"
             category="IoT · Full-Stack · Assistive Tech"
             problem={
@@ -560,7 +646,7 @@ export default function App() {
             ]}
           />
           <ProjectBlock
-            index={4}
+            index={6}
             title="Rexa"
             category="Robotics · Embedded Systems"
             problem={
@@ -595,7 +681,7 @@ export default function App() {
             ]}
           />
           <ProjectBlock
-            index={5}
+            index={7}
             title="CS COMPILE — Edition 1"
             category="Editor · IEEE Computer Society Kerala Chapter · Quantum Computing"
             image="COMPILE BROWN.jpg"
@@ -625,7 +711,7 @@ export default function App() {
             ]}
           />
           <ProjectBlock
-            index={6}
+            index={8}
             title="CS COMPILE — Edition 2"
             category="Designer · IEEE Computer Society Kerala Chapter · Cloud Computing"
             image="COMPILE BLUE.png"
@@ -842,7 +928,7 @@ export default function App() {
               cats: [
                 {
                   k: "Programming Languages",
-                  v: ["Java", "C++", "JavaScript", "TypeScript"],
+                  v: ["Python", "Java", "C++", "JavaScript", "TypeScript"],
                 },
                 {
                   k: "Frontend Development",
@@ -879,6 +965,19 @@ export default function App() {
                     "Computer Vision",
                     "Image Processing",
                     "AI Integration",
+                  ],
+                },
+                {
+                  k: "Data Science",
+                  v: [
+                    "Data Analysis",
+                    "Data Preprocessing",
+                    "Dataset Engineering",
+                    "Feature Engineering",
+                    "Random Forest",
+                    "Recommendation Systems",
+                    "Altair AI Studio (RapidMiner)",
+                    "TurboPrep",
                   ],
                 },
                 {
@@ -988,6 +1087,13 @@ export default function App() {
         {/* no items-start: cells stretch so cards in a row match height */}
         <div className="grid gap-5 xl:grid-cols-2">
           {[
+            {
+              name: "Student Competition Winner — First Prize",
+              issuer: "Siemens Empowers Education · 2026",
+              image: "SIEMENS CERTIFICATE.png",
+              desc: "Siemens digital badge for winning first prize in the Data Science Contest held with Siemens at IEDC Summit 2026.",
+              keywords: ["Data Science", "Machine Learning", "Competition"],
+            },
             {
               name: "AI Foundations",
               issuer: "Intel · 2025",

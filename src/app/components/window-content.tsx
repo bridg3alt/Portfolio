@@ -22,6 +22,8 @@ import certWadhwani from "../../imports/Wadhwani.png";
 import certCitra from "../../imports/PORTFOLIO CONTENT/CITRA CERTIFICATE.jpeg";
 import certStride50000 from "../../imports/PORTFOLIO CONTENT/STRIDE 50000.jpeg";
 import certStrideAwardDist from "../../imports/PORTFOLIO CONTENT/STRIDE AWARD DIST.jpeg";
+import certSiemens from "../../imports/PORTFOLIO CONTENT/SIEMENS.jpeg";
+import certSiemensBadge from "../../imports/PORTFOLIO CONTENT/SIEMENS CERTIFICATE.png";
 import photoSecretary from "../../imports/PORTFOLIO CONTENT/SECRETARY.jpeg";
 import photoEccCsks from "../../imports/PORTFOLIO CONTENT/ECC CSKS.jpeg";
 import certPython from "./CERTIFICATES/Python Internship.jpeg";
@@ -57,6 +59,8 @@ const certImageMap: Record<string, string> = {
   "CITRA CERTIFICATE.jpeg": certCitra,
   "STRIDE 50000.jpeg": certStride50000,
   "STRIDE AWARD DIST.jpeg": certStrideAwardDist,
+  "SIEMENS.jpeg": certSiemens,
+  "SIEMENS CERTIFICATE.png": certSiemensBadge,
   "SECRETARY.jpeg": photoSecretary,
   "ECC CSKS.jpeg": photoEccCsks,
   "Python Internship.jpeg": certPython,

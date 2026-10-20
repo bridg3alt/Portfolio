@@ -248,6 +248,7 @@ export function Hero({
             I'm a <b className="text-foreground">Computer Science undergraduate</b>{" "}
             passionate about building technology that creates meaningful impact.
             My interests span <b className="text-foreground">Artificial Intelligence</b>,{" "}
+            <b className="text-foreground">Data Science</b>,{" "}
             <b className="text-foreground">Assistive Technology</b>,{" "}
             <b className="text-foreground">Human-Centered Computing</b> and{" "}
             <b className="text-foreground">Robotics</b>, where I enjoy transforming
