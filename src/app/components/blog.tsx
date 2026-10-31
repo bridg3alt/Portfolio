@@ -50,7 +50,8 @@ function Meta({ post }: { post: BlogPost }) {
       className="font-mono text-[0.7rem] uppercase tracking-[0.2em]"
       style={{ color: "var(--ink-soft)" }}
     >
-      {formatPostDate(post.date)} · {post.readingMinutes} min read
+      {post.date && `${formatPostDate(post.date)} · `}
+      {post.readingMinutes} min read
       {post.draft && (
         <span
           className="ml-3 rounded px-1.5 py-0.5 tracking-[0.15em]"

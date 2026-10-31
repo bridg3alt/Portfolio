@@ -21,7 +21,7 @@ Post body in normal Markdown…
 | Field | Required | Notes |
 | --- | --- | --- |
 | `title` | yes | |
-| `date` | yes | `YYYY-MM-DD`; posts sort newest first |
+| `date` | no | `YYYY-MM-DD`; posts sort newest first, undated ones last |
 | `excerpt` | no | shown on the list page |
 | `tags` | no | comma-separated; become filter chips |
 | `cover` | no | image path relative to this folder |
